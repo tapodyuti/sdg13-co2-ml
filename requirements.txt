@@ -1,0 +1,4 @@
+mkl-service==2.5.2
+mkl_fft @ file:///C:/miniconda3/conda-bld/mkl_fft_1761592981169/work
+mkl_random @ file:///C:/miniconda3/conda-bld/mkl_random_1761593075610/work
+numpy @ file:///C:/b/abs_81ri0q57xq/croot/numpy_and_numpy_base_1755590863635/work/dist/numpy-1.26.4-cp310-cp310-win_amd64.whl#sha256=b6162b3d8f61a8b10293d275d39feb04e0969ade6c6fdf4251eb84d35b403681
