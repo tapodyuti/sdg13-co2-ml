@@ -2,8 +2,12 @@ import streamlit as st
 import pandas as pd
 import joblib
 
-# load model
-model = joblib.load("sdg13_rf_pipeline.pkl")
+# caching the loaded model so it is not reloaded on every rerun
+@st.cache_resource
+def load_model():
+    return joblib.load("sdg13_rf_pipeline.pkl")
+
+model = load_model()
 
 st.title("SDG-13: Household CO₂ Emission Estimator")
 
@@ -32,3 +36,5 @@ if st.button("Predict CO₂ emissions"):
 
     co2_pred = model.predict(input_df)[0]
     st.subheader(f"Estimated monthly CO₂ emissions: {co2_pred:.1f} kg")
+
+    
